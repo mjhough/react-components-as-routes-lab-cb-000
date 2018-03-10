@@ -6,16 +6,16 @@ const Directors = () => {
     <div>
       <h1>Directors Page</h1>
       {
-        directors.map(director => {
+        directors.map((director, i) => {
           return (
-            <div>
+            <div key={i}>
               <h2>Director: {director.name}</h2>
               <h3>Movies:</h3>
               <ul>
               {
-                director.movies.map(movie => {
+                director.movies.map((movie, i) => {
                   return (
-                    <li>{movie}</li>
+                    <li key={i}>{movie}</li>
                   )
                 })
               }

@@ -6,17 +6,17 @@ const Movies = () => {
     <div>
       <h1>Movies Page</h1>
       {
-        movies.map(movie => {
+        movies.map((movie, i) => {
           return (
-            <div>
+            <div key={i}>
               <h2>Title: {movie.title}</h2>
               <h3>Time: {movie.time}</h3>
               <h3>Genres:</h3>
               <ul>
               {
-                movie.genres.map(genre => {
+                movie.genres.map((genre, i) => {
                   return (
-                    <li>{genre}</li>
+                    <li key={i}>{genre}</li>
                   )
                 })
               }
